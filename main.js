@@ -13,7 +13,7 @@ const images = [
 let currentIndex = 0;
 
 function getColor() {
-  let minLightness = 158;
+  let minLightness = 99;
   let range = 128;
   let red = minLightness + Math.floor(Math.random() * range);
   let green = minLightness + Math.floor(Math.random() * range);
@@ -26,12 +26,11 @@ function slideShow() {
 }
 
 function showNextImg() {
-  if (currentIndex >= images.length) {
+  if (currentIndex >= images.length - 1) {
     currentIndex = 0;
   }
   currentIndex++;
   slideShow();
-  console.log("next", currentIndex);
 }
 function showPrevImg() {
   if (currentIndex === 0) {
@@ -39,7 +38,6 @@ function showPrevImg() {
   }
   currentIndex--;
   slideShow();
-  console.log("prev", currentIndex);
 }
 
 slideShow();
