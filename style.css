@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  height: 60vh;
+  width: 70vw;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.next-btn,
+.prev-btn {
+  padding: 20px 30px;
+  font-size: 32px;
+  margin-top: 2vh;
+}
