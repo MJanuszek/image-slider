@@ -1,6 +1,7 @@
 const slider = document.getElementById("slider-container");
 const nextBtn = document.getElementById("next-button");
 const prevBtn = document.getElementById("prev-button");
+const backgroundColors = document.getElementById("bg-wrapper");
 
 const images = [
   "gallery/david-valentine-IFGSEET0JtQ-unsplash.jpg",
@@ -10,8 +11,18 @@ const images = [
 ];
 
 let currentIndex = 0;
+
+function getColor() {
+  let minLightness = 158;
+  let range = 128;
+  let red = minLightness + Math.floor(Math.random() * range);
+  let green = minLightness + Math.floor(Math.random() * range);
+  let blue = minLightness + Math.floor(Math.random() * range);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
 function slideShow() {
   slider.style.backgroundImage = `url(${images[currentIndex]})`;
+  backgroundColors.style.backgroundColor = getColor();
 }
 
 function showNextImg() {
